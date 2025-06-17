@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Логистична компания</title>
+  <!-- Празен favicon, за да няма 404/500 при /
+       и за да не изкарва browser prompt -->
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div id="app">
+
+  <!-- AUTH -->
+  <div id="auth-container">
+    <div class="tabs">
+      <button id="tab-login">Вход</button>
+      <button id="tab-register">Регистрация</button>
+    </div>
+
+    <!-- LOGIN -->
+    <div id="login-view" class="view">
+      <h3>Вход</h3>
+      <input id="login-username" placeholder="Потребителско име" />
+      <input id="login-password" type="password" placeholder="Парола" />
+      <button id="login-button">Вход</button>
+    </div>
+
+    <!-- REGISTER -->
+    <div id="register-view" class="view" style="display:none;">
+      <h3>Регистрация</h3>
+      <input id="reg-username" placeholder="Потребителско име" />
+      <input id="reg-password" type="password" placeholder="Парола" />
+      <select id="reg-role">
+        <option value="CLIENT">Клиент</option>
+        <option value="EMPLOYEE">Служител</option>
+      </select>
+      <input id="reg-link-id" placeholder="ID на клиент/служител (по избор)" />
+      <button id="register-button">Регистрация</button>
+    </div>
+
+    <p id="auth-error" class="error"></p>
+  </div>
+
+  <!-- MAIN SPA -->
+  <div id="main-container" style="display:none;">
+    <header>
+      <h1>Логистична компания</h1>
+      <div>
+        <span id="user-info"></span>
+        <button id="logout-button">Изход</button>
+      </div>
+    </header>
+    <nav id="menu"></nav>
+    <main id="content">
+      <p>Изберете секция от менюто.</p>
+    </main>
+  </div>
+
+</div>
+<script src="js/app.js"></script>
+</body>
+</html>
